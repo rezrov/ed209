@@ -9,7 +9,7 @@ import redditbot
 import s3bothelper
 
 
-class signalbot():
+class signal_bot():
 
     def __init__(self, signal, configPath):
 
@@ -38,7 +38,7 @@ class signalbot():
 # Internal functions
 
     def _botFunctions(self):
-        for item in dir(signalbot):
+        for item in dir(signal_bot):
             if not item.startswith("_") and not item.endswith('Handler') and not item.startswith('admin') and not item.startswith('root'):
                 self.function_list.append(item)
             elif not item.startswith("_") and not item.endswith('Handler') and item.startswith('admin'):
